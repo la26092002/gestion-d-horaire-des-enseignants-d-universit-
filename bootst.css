@@ -1,0 +1,70 @@
+:root{
+	--soft-color: #3f3d56;
+	--animation-set:3s ease-out;
+}
+.nav-link:hover{
+	color: var(--bs-primary) !important;
+}
+.btn-soft{
+	background-color: E6E6E6;
+	color: var(--soft-color)!important;
+}
+#features .card{
+	height: 250px;
+}
+.lists{
+	list-style-type: none;
+	font-size: 1.2rem;
+	color: var(--bs-success);
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+.lists li::before{
+	content: "✔️";
+}
+.img-control{
+	transform: rotateX(355deg) rotateY(74deg) rotateZ(3deg) rotateY(326deg) translate3d(0px, 0px, 20px) !important;
+}
+#shape{
+	background-color: E6E6E6;
+	padding: 3em;
+	position: relative;
+}
+#shape::before{
+	position: absolute;
+	top: -38%;
+	right: 0;
+	z-index: -9999;
+	content: "";
+	clip-path: polygon(100% 10%,100% 100%,0 100%,0 23%);
+	background-color: E6E6E6;
+	height: 187px;
+	width: 100%;
+}
+.social li a.fab{
+	color: gray;
+	text-decoration: none;
+}
+
+.up-animation:hover{
+	transform: translateY(-5px);
+	transition: transform .5s ease;
+}
+.toleft{
+	animation: toleftAnimation var(--animation-set);
+}
+.toright{
+	animation: torightAnimation var(--animation-set);
+}
+.toup{
+	animation: toupAnimation var(--animation-set);
+}
+.todown{
+	animation: todownAnimation var(--animation-set);
+}
+
+@media screen and (max-width: 780px){
+	#shape::before{
+		top: -20%;
+	}
+}
